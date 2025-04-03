@@ -14,6 +14,11 @@ print("""
 
 
 name = input("Before starting, tell me your name for the best experience!\nName: ")
+match name:
+    case   "aditya" | "suyog" :
+        print(f"your someone special to devloper ,{name}\n")
+    case _ :
+        print(f"have a good time , {name}\n")
 
 
 current_hour = time.localtime().tm_hour
@@ -77,7 +82,7 @@ while True:
             ]
             print(random.choice(jokes))
 
-        case "can you perform mathematical calculation for me?" | "can you do maths for me?" | "hey can you do maths" | "maths":
+        case "can you perform mathematical calculation for me?" | "can you do maths for me?" | "hey can you do maths" | "maths" | "hey can you do mathmetical operation for me ?" | "hey can you do mathmetical operation for me" | "can you do mathmetical calculation for me" |"can you perform mathematical calculation for me":
             print("1. Addition\n2. Multiplication\n3. Division\n4. Subtraction")
             try:
                 operation = int(input("What would you like to do? Enter only the number: "))
@@ -110,7 +115,7 @@ while True:
             say = input("What shall I say or repeat? ")
             print(say)
 
-        case "scissors, paper, rock" | "wanna play scissors paper rock?" | "wanna scissors paper rock?":
+        case "scissors, paper, rock" | "wanna play scissors paper rock?" | "wanna scissors paper rock?" | "lez play scissor paper rock" | "scisors paper rock"|"scissors papers rocks":
             choices = ["scissors", "paper", "rock"]
             computer_choice = random.choice(choices)
 
@@ -155,6 +160,20 @@ while True:
             webbrowser.open("https://vscode.dev")
         case "googledrive" | "google drive" | " open google drive":
             webbrowser.open("https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto")
+        case "play my favourite song" | " favourite song plz" |"fav song play" :
+            webbrowser.open ("https://www.youtube.com/watch?v=IpFX2vq8HKw")
+        case 'thank you' | "ty" | "tysm" |"thanks" :
+            print("you are always welcome :)")
+        case "search"| "search wiki" :
+            search=input(f"what shall i search ,{name} :")
+            webbrowser.open(f"https://en.wikipedia.org/wiki/{search}")
+        case "search privately"| "secure search":
+            securesearch=input("what shall i search securely :")
+            webbrowser.open(f"https://duckduckgo.com/?q={securesearch}&t=h_&ia=web")
+        case "search youtube"| "yt search" |"yt video search" |"search in yt" :
+            ytsearch=input("what shall i search on youtube :")
+            webbrowser.open(f'https://www.youtube.com/results?search_query={ytsearch}')
+
 
 
         case _:
